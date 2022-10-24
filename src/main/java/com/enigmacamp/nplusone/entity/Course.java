@@ -20,7 +20,7 @@ public class Course {
 
     //    optional=false is a runtime instruction.
 //
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "course_type_id", nullable = false)
     private CourseType courseType;
 

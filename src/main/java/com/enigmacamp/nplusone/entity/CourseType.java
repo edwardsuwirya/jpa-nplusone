@@ -58,7 +58,7 @@ public class CourseType {
         return "CourseType{" +
                 "courseTypeId='" + courseTypeId + '\'' +
                 ", typeName='" + typeName + '\'' +
-                ", courseList='" + courseList + '\'' +
+//                ", courseList='" + courseList + '\'' +
                 '}';
     }
 

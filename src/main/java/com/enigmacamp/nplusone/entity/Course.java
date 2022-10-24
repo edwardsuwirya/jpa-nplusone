@@ -20,7 +20,7 @@ public class Course {
 
     //    optional=false is a runtime instruction.
 //
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "course_type_id", nullable = false)
     private CourseType courseType;
 
@@ -74,6 +74,16 @@ public class Course {
         this.courseType = courseType;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Course{" +
+//                "courseId='" + courseId + '\'' +
+//                ", title='" + title + '\'' +
+//                ", description='" + description + '\'' +
+//                ", link='" + link + '\'' +
+//                ", courseType=" + courseType +
+//                '}';
+//    }
     @Override
     public String toString() {
         return "Course{" +
@@ -81,7 +91,6 @@ public class Course {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", link='" + link + '\'' +
-                ", courseType=" + courseType +
                 '}';
     }
 }

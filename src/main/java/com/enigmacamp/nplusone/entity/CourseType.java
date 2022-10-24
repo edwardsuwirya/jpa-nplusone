@@ -18,7 +18,7 @@ public class CourseType {
     private String typeName;
 
     //Default Lazy
-    @OneToMany(mappedBy = "courseType", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "courseType")
     private List<Course> courseList;
 
     public CourseType(String typeName) {
@@ -52,20 +52,20 @@ public class CourseType {
         this.courseList = courseList;
     }
 
-//    @Override
-//    public String toString() {
-//        return "CourseType{" +
-//                "courseTypeId='" + courseTypeId + '\'' +
-//                ", typeName='" + typeName + '\'' +
-//                ", courseList='" + courseList + '\'' +
-//                '}';
-//    }
-
     @Override
     public String toString() {
         return "CourseType{" +
                 "courseTypeId='" + courseTypeId + '\'' +
                 ", typeName='" + typeName + '\'' +
+                ", courseList='" + courseList + '\'' +
                 '}';
     }
+
+//    @Override
+//    public String toString() {
+//        return "CourseType{" +
+//                "courseTypeId='" + courseTypeId + '\'' +
+//                ", typeName='" + typeName + '\'' +
+//                '}';
+//    }
 }

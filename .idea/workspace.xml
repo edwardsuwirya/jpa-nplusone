@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b92aab4-458c-4559-9701-b25a34f58042" name="Changes" comment="Query using JPA find all, producing n+1 problem">
+    <list default="true" id="8b92aab4-458c-4559-9701-b25a34f58042" name="Changes" comment="Solution Query using JPA many-to-one">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/repository/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/entity/CourseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/entity/CourseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/repository/CourseTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/repository/CourseTypeRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="01-Problem-From-Course" />
+        <entry key="$PROJECT_DIR$" value="01-Solution-From-Course" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -175,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666581901654</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Solution Query using JPA many-to-one">
+      <created>1666583167555</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666583167555</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +205,8 @@
     <MESSAGE value="JPA N+1 problem" />
     <MESSAGE value="Query using JPA find" />
     <MESSAGE value="Query using JPA find all, producing n+1 problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Query using JPA find all, producing n+1 problem" />
+    <MESSAGE value="Solution Query using JPA many-to-one" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solution Query using JPA many-to-one" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

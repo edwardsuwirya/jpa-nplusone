@@ -1,6 +1,5 @@
 package com.enigmacamp.nplusone;
 
-import com.enigmacamp.nplusone.entity.Course;
 import com.enigmacamp.nplusone.entity.CourseType;
 import com.enigmacamp.nplusone.repository.CourseRepository;
 import com.enigmacamp.nplusone.repository.CourseTypeRepository;
@@ -8,10 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Component
+@Transactional
 public class Console implements CommandLineRunner {
     private CourseRepository courseRepository;
     private CourseTypeRepository courseTypeRepository;
@@ -29,34 +29,44 @@ public class Console implements CommandLineRunner {
 //        course1.setCourseType(newCourseType);
 //        courseRepository.save(course1);
 
+//        System.out.println("");
+//        System.out.println("============= Find By Id ==============");
+//        System.out.println("Using Inner Join -> No Problem");
+//        Optional<Course> result = courseRepository.findById("64563118-0593-4c7f-8357-6286ebb5fda4");
+//        if (result.isEmpty()) {
+//            throw new RuntimeException("Data not found");
+//        }
+//
+//        Course course = result.get();
+//        System.out.println(course);
+////
+//        System.out.println("");
+//        System.out.println("============= N+1 ==============");
+////        N+1 problem
+//        List<Course> results = courseRepository.findAll();
+//        for (Course course1 : results) {
+//            System.out.println(course1);
+//        }
+//
+//        System.out.println("");
+//        System.out.println("============= N+1 Solution ==============");
+//        List<Course> resultSolution = courseRepository.findAllByCourseType();
+//        if (resultSolution.isEmpty()) {
+//            throw new RuntimeException("Data not found");
+//        }
+//
+//        for (Course course1 : resultSolution) {
+//            System.out.println(course1);
+//        }
+
         System.out.println("");
         System.out.println("============= Find By Id ==============");
-        System.out.println("Using Inner Join -> No Problem");
-        Optional<Course> result = courseRepository.findById("64563118-0593-4c7f-8357-6286ebb5fda4");
+        System.out.println("2 query from Course Type and from Course");
+        Optional<CourseType> result = courseTypeRepository.findById("164e7828-28d3-47b5-aadb-3b9964b7de35");
         if (result.isEmpty()) {
             throw new RuntimeException("Data not found");
         }
-
-        Course course = result.get();
-        System.out.println(course);
-
-        System.out.println("");
-        System.out.println("============= N+1 ==============");
-//        N+1 problem
-        List<Course> results = courseRepository.findAll();
-        for (Course course1 : results) {
-            System.out.println(course1);
-        }
-
-        System.out.println("");
-        System.out.println("============= N+1 Solution ==============");
-        List<Course> resultSolution = courseRepository.findAllByCourseType();
-        if (resultSolution.isEmpty()) {
-            throw new RuntimeException("Data not found");
-        }
-
-        for (Course course1 : resultSolution) {
-            System.out.println(course1);
-        }
+        CourseType courseType = result.get();
+        System.out.println(courseType);
     }
 }

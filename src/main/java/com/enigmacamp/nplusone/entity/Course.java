@@ -18,10 +18,11 @@ public class Course {
     @Column(name = "link", nullable = false, length = 200)
     private String link;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "course_info_id", referencedColumnName = "course_info_id")
-    private CourseInfo courseInfo;
-
+    //    optional=false is a runtime instruction.
+//
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "course_type_id", nullable = false)
+    private CourseType courseType;
 
     public Course(String title, String description, String link) {
         this.title = title;
@@ -65,12 +66,12 @@ public class Course {
         this.link = link;
     }
 
-    public CourseInfo getCourseInfo() {
-        return courseInfo;
+    public CourseType getCourseType() {
+        return courseType;
     }
 
-    public void setCourseInfo(CourseInfo courseInfo) {
-        this.courseInfo = courseInfo;
+    public void setCourseType(CourseType courseType) {
+        this.courseType = courseType;
     }
 
     @Override
@@ -80,7 +81,7 @@ public class Course {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", link='" + link + '\'' +
-                ", courseInfo=" + courseInfo +
+                ", courseType=" + courseType +
                 '}';
     }
 }

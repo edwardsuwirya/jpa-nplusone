@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b92aab4-458c-4559-9701-b25a34f58042" name="Changes" comment="Query using JPA find">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8b92aab4-458c-4559-9701-b25a34f58042" name="Changes" comment="Query using JPA find all, producing n+1 problem">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/Console.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/entity/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/entity/CourseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enigmacamp/nplusone/entity/CourseType.java" afterDir="false" />
@@ -162,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666578868603</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Query using JPA find all, producing n+1 problem">
+      <created>1666581232083</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666581232083</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +188,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JPA N+1 problem" />
     <MESSAGE value="Query using JPA find" />
-    <option name="LAST_COMMIT_MESSAGE" value="Query using JPA find" />
+    <MESSAGE value="Query using JPA find all, producing n+1 problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Query using JPA find all, producing n+1 problem" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

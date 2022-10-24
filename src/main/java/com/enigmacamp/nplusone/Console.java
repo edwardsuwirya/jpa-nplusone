@@ -29,30 +29,27 @@ public class Console implements CommandLineRunner {
 //        course1.setCourseType(newCourseType);
 //        courseRepository.save(course1);
 
-
-//        Optional<Course> result = courseRepository.findById("64563118-0593-4c7f-8357-6286ebb5fda4");
-//        if (result.isEmpty()) {
-//            throw new RuntimeException("Data not found");
-//        }
-//
-//        Course course = result.get();
-//        System.out.println(course);
-
-//        N+1 problem
-        List result = courseRepository.findAll();
+        System.out.println("");
+        System.out.println("============= Find By Id ==============");
+        System.out.println("Using Inner Join -> No Problem");
+        Optional<Course> result = courseRepository.findById("64563118-0593-4c7f-8357-6286ebb5fda4");
         if (result.isEmpty()) {
             throw new RuntimeException("Data not found");
         }
 
-        System.out.println(result.size());
+        Course course = result.get();
+        System.out.println(course);
 
-//        List<CourseType> resultType = courseTypeRepository.findAll();
-//        if (resultType.isEmpty()) {
-//            throw new RuntimeException("Data not found");
-//        }
-//        System.out.println(resultType);
-//
-//        CourseType courseType = resultType.get();
-//        System.out.println(courseType);
+        System.out.println("");
+        System.out.println("============= N+1 ==============");
+//        N+1 problem
+        List<Course> results = courseRepository.findAll();
+        if (result.isEmpty()) {
+            throw new RuntimeException("Data not found");
+        }
+
+        for (Course course1 : results) {
+            System.out.println(course1);
+        }
     }
 }

@@ -52,20 +52,20 @@ public class CourseType {
         this.courseList = courseList;
     }
 
-    @Override
-    public String toString() {
-        return "CourseType{" +
-                "courseTypeId='" + courseTypeId + '\'' +
-                ", typeName='" + typeName + '\'' +
-                ", courseList='" + courseList + '\'' +
-                '}';
-    }
-
 //    @Override
 //    public String toString() {
 //        return "CourseType{" +
 //                "courseTypeId='" + courseTypeId + '\'' +
 //                ", typeName='" + typeName + '\'' +
+//                ", courseList='" + courseList + '\'' +
 //                '}';
 //    }
+
+    @Override
+    public String toString() {
+        return "CourseType{" +
+                "courseTypeId='" + courseTypeId + '\'' +
+                ", typeName='" + typeName + '\'' +
+                '}';
+    }
 }

@@ -44,11 +44,18 @@ public class Console implements CommandLineRunner {
         System.out.println("============= N+1 ==============");
 //        N+1 problem
         List<Course> results = courseRepository.findAll();
-        if (result.isEmpty()) {
+        for (Course course1 : results) {
+            System.out.println(course1);
+        }
+
+        System.out.println("");
+        System.out.println("============= N+1 Solution ==============");
+        List<Course> resultSolution = courseRepository.findAllByCourseType();
+        if (resultSolution.isEmpty()) {
             throw new RuntimeException("Data not found");
         }
 
-        for (Course course1 : results) {
+        for (Course course1 : resultSolution) {
             System.out.println(course1);
         }
     }
